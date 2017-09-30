@@ -35,7 +35,7 @@ import { MatSelectModule,
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
   ],
   exports: [
     HabitantsComponent

@@ -1,13 +1,35 @@
-<md-card class="example-card">
-    <md-card-header>
-        <md-card-title>{{habitant.name}}</md-card-title>
-    </md-card-header>
-    <div class="test">
-        <img md-card-image src="{{habitant.thumbnail}}">
-    </div>
-    <md-card-content>
-    </md-card-content>
-    <md-card-actions>
-        <button md-button>Back</button>
-    </md-card-actions>
-</md-card>
+<div class="card" [@flipState]="flip" >
+    <md-card class="front-card">
+        <md-card-title class="card-title">
+            {{habitant.name}} <button md-icon-button (click)="toggleFlip()"><md-icon class="material-icons">remove_red_eye</md-icon></button>
+        </md-card-title>
+        <md-card-subtitle>
+                {{habitant.age}} years old
+        </md-card-subtitle>
+        <div class="image-container">
+            <img md-card-image src="{{habitant.thumbnail}}">
+        </div>
+        <md-card-content>
+            <div style="display:flex;">
+                <div>
+                    <img src="./assets/img/weight.png" alt="" class="weight-img"> {{habitant.weight}} 
+                </div>
+                <div>
+                    <img src="./assets/img/ruler.png" alt="" class="height-img"> {{habitant.height}}
+                </div>
+            </div>
+            <div>
+                <img src="./assets/img/hair2.png" alt="" class="hair-color-img"> {{habitant.hair_color}}
+            </div>
+        </md-card-content>
+    </md-card>
+    <md-card class="back-card">
+        <md-card-title>
+            {{habitant.name}}
+        </md-card-title>
+        <md-card-content>
+            <p>Professions: {{habitant.professions}}</p>
+            <p>Friends: {{habitant.friends}}</p>
+        </md-card-content>
+    </md-card>
+</div>

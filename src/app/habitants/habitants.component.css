@@ -22,3 +22,8 @@
     max-width: 300px;
     width: 100%;
 }
+
+.mat-toolbar {
+    color: white;
+    font-size: 35px;
+}
