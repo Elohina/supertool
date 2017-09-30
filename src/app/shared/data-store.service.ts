@@ -20,5 +20,13 @@ export class DataStore {
         this.cities = Object.keys(data);
     }
 
+    public searchHabitant(text: string, city: string) {
+        return this.data[city].filter(
+            (person: any) => {
+                return person.name.toLowerCase().match(text.toLowerCase());
+            }
+        );
+    }
+
 }
 

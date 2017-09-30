@@ -9,10 +9,12 @@ import { DataStore } from '../shared/data-store.service';
 })
 export class HabitantsComponent implements OnInit {
   public cities: string[];
-  public tests = ['test1', 'test2'];
   public data: any;
   public city: string;
   public list: any[] = [];
+  public search_input: string;
+  public habitants: any[];
+
   constructor(private dataService: DataService,
               private dataStore: DataStore) {}
   ngOnInit() {
@@ -25,5 +27,11 @@ export class HabitantsComponent implements OnInit {
 
   selectedCity() {
     this.list = this.dataStore.getCountriesHabitants(this.city);
+  }
+
+  seachHabitant() {
+    if (this.city) {
+      this.list = this.dataStore.searchHabitant(this.search_input, this.city);
+    }
   }
 }

@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 //   styleUrls: ['./habitant-detail.component.css']
 })
 export class HabitantDetailComponent {
-
+  
 }
