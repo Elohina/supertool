@@ -1,11 +1,19 @@
-<!-- <md-select #country 
-           placeholder="Select country"
-           [(ngModel)]="country"
-           name="country">
-    <md-option *ngFor="let country of data"
-               [value]="country">
-        {{country}}
-    </md-option>
-</md-select> -->
+<md-toolbar>
+    <h2>SuperTool</h2>
+</md-toolbar>
+<div class="filters">
+    <md-select [(ngModel)]="city"
+            placeholder="Select city"
+            name="city"
+            (change)="selectedCity()"
+            class="city-select">
+        <md-option *ngFor="let city of cities" [value]="city">
+            {{city}}
+        </md-option>
+    </md-select>
 
-{{countries}}
+    <md-form-field class="search-container">
+        <input mdInput class="seacrh-input" placeholder="Search habitant">
+    </md-form-field>
+</div>
+<app-habitants-list [list]="list"></app-habitants-list>

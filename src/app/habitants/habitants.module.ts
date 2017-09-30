@@ -1,23 +1,44 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Http } from '@angular/http';
+import {SharedModule} from '../shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HabitantsListComponent} from './habitants-list/habitants-list.component';
+import {HabitantDetailComponent} from './habitant-detail/habitant-detail.component';
+
 
 import { HabitantsComponent } from './habitants.component';
 
-import { Habitant } from './shared/habitants-class.service';
-import { HabitantsService } from './shared/habitants.service';
+import { MatSelectModule,
+  MatInputModule,
+  MatCardModule,
+  MatGridListModule,
+  MatButtonModule,
+  MatToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     HabitantsComponent,
+    HabitantsListComponent,
+    HabitantDetailComponent
   ],
   imports: [
     CommonModule,
+    SharedModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule
   ],
   exports: [
-    HabitantsComponent,
+    HabitantsComponent
   ],
-  providers: [Habitant, HabitantsService, Http],
+  providers: [],
   bootstrap: [HabitantsComponent]
 })
 export class HabitantsModule { }

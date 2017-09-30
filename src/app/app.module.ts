@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 import { HabitantsModule } from './habitants/habitants.module';
 import { HomeComponent } from './home/home.component';
-import { MatSelectModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
 
 
@@ -16,9 +15,8 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    CoreModule,
+    SharedModule,
     HabitantsModule,
-    MatSelectModule,
     HttpModule
   ],
   exports: [
