@@ -14,11 +14,11 @@
 
     <md-form-field class="search-container">
         <input mdInput 
-               class="seacrh-input"
-               placeholder="Search habitant"
-               [(ngModel)]="search_input"
-               name="search_input"
-               (keyup)="seachHabitant()">
+                class="seacrh-input"
+                placeholder="Search habitant"
+                [(ngModel)]="search_input"
+                name="search_input"
+                (keyup)="searchHabitant()">
     </md-form-field>
 </div>
 <app-habitants-list [list]="list"></app-habitants-list>

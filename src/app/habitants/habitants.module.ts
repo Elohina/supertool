@@ -15,7 +15,8 @@ import { MatSelectModule,
   MatCardModule,
   MatGridListModule,
   MatButtonModule,
-  MatToolbarModule } from '@angular/material';
+  MatToolbarModule,
+  MatPaginatorModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MatSelectModule,
     MatGridListModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatPaginatorModule
   ],
   exports: [
     HabitantsComponent

@@ -1,5 +1,9 @@
+<md-paginator [length]="length"
+    [pageSize]="pageSize"
+    (page)="onPageChange($event)">
+</md-paginator>
 <md-grid-list cols="5" rowHeight="350px" gutterSize="4px">
-    <md-grid-tile *ngFor="let habitant of list">
+    <md-grid-tile *ngFor="let habitant of listShow">
         <md-card class="example-card">
             <md-card-header>
                 <md-card-title>{{habitant.name}}</md-card-title>

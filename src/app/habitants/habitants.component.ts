@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { DataStore } from '../shared/data-store.service';
+import {PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-habitants',
@@ -13,7 +14,6 @@ export class HabitantsComponent implements OnInit {
   public city: string;
   public list: any[] = [];
   public search_input: string;
-  public habitants: any[];
 
   constructor(private dataService: DataService,
               private dataStore: DataStore) {}
@@ -29,9 +29,10 @@ export class HabitantsComponent implements OnInit {
     this.list = this.dataStore.getCountriesHabitants(this.city);
   }
 
-  seachHabitant() {
+  searchHabitant() {
     if (this.city) {
       this.list = this.dataStore.searchHabitant(this.search_input, this.city);
     }
   }
+
 }
