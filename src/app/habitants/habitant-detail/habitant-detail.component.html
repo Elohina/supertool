@@ -1,7 +1,7 @@
-<div class="card" [@flipState]="flip" >
+<div class="card" [@flipState]="flip" (click)="toggleFlip()">
     <md-card class="front-card">
         <md-card-title class="card-title">
-            {{habitant.name}} <button md-icon-button (click)="toggleFlip()"><md-icon class="material-icons">remove_red_eye</md-icon></button>
+            {{habitant.name}}
         </md-card-title>
         <md-card-subtitle>
                 {{habitant.age}} years old
