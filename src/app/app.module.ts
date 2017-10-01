@@ -3,21 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { SharedModule } from './shared/shared.module';
 import { HabitantsModule } from './habitants/habitants.module';
-import { HomeComponent } from './home/home.component';
+import { HabitantsComponent } from './habitants/habitants.component';
 import { HttpModule } from '@angular/http';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HabitantsComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     HabitantsModule,
-    HttpModule
+    HttpModule,
+    SharedModule
   ],
   exports: [
     AppComponent
