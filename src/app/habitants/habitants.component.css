@@ -12,9 +12,11 @@
 }
 
 .filters {
-    left: 26%;
     position: relative;
-    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    background-color: white;
 }
 
 .city-select {

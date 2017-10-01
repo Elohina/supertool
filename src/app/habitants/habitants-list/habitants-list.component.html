@@ -1,9 +1,17 @@
-<md-paginator [length]="length"
+<md-paginator *ngIf="list.length"
+              [length]="length"
               [pageSize]="pageSize"
-              (page)="onPageChange($event)">
+              (page)="onPageChange($event)"
+              class="paginator">
 </md-paginator>
 <md-grid-list cols="4" rowHeight="400px">
     <md-grid-tile *ngFor="let habitant of listShow">
         <app-habitant-detail [habitant]="habitant"></app-habitant-detail>
     </md-grid-tile>
 </md-grid-list>
+<md-paginator *ngIf="list.length"
+              [length]="length"
+              [pageSize]="pageSize"
+              (page)="onPageChange($event)"
+              class="paginator">
+</md-paginator>
