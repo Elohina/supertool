@@ -16,7 +16,8 @@ import { MatSelectModule,
   MatGridListModule,
   MatButtonModule,
   MatToolbarModule,
-  MatPaginatorModule } from '@angular/material';
+  MatPaginatorModule,
+  MatChipsModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MatSelectModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatPaginatorModule,
+    MatChipsModule
   ],
   exports: [
     HabitantsComponent

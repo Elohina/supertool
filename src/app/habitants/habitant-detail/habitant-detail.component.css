@@ -40,6 +40,7 @@
     position: absolute;
     background-color: aliceblue;
     left: -20px;
+    overflow-y: auto;
 }
 
 .mat-card-title {
@@ -67,6 +68,20 @@
     top: 4px;
 }
 
-.front-card:hover {
+.front-card:hover, .back-card:hover {
     box-shadow: 0px 1px 1px -2px rgba(0,0,0,.2), inset 3px 1px 2px 0 rgba(255, 255, 255, 0.14), inset 2px 1px 5px 0 rgba(0,0,0,.12);
+    cursor: pointer;
+}
+
+.professions-friends {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pf-title {
+    font-weight: bold;
+}
+
+.chip-element {
+    color: white;
 }

@@ -28,8 +28,30 @@
             {{habitant.name}}
         </md-card-title>
         <md-card-content>
-            <p>Professions: {{habitant.professions}}</p>
-            <p>Friends: {{habitant.friends}}</p>
+            <div class="professions-friends">
+                <div>
+                    <p class="pf-title">Professions ({{habitant.professions.length}})</p>
+                    <md-chip-list class="mat-chip-list-stacked">
+                        <md-chip *ngFor="let profession of habitant.professions; let i = index"
+                                selected="true"
+                                class="chip-element"
+                                [ngStyle]="{'background-color': pill_colors[i >= pill_colors.length ? i - pill_colors.length : i]}">
+                                {{profession}}
+                        </md-chip>
+                    </md-chip-list>
+                </div>
+                <div>
+                    <p class="pf-title">Friends ({{habitant.friends.length}})</p>
+                    <md-chip-list class="mat-chip-list-stacked">
+                        <md-chip *ngFor="let friend of habitant.friends let i = index"
+                            selected="true"
+                            class="chip-element"
+                            [ngStyle]="{'background-color': pill_colors[i >= pill_colors.length ? i - pill_colors.length : i ]}">
+                            {{friend}}
+                        </md-chip>
+                    </md-chip-list>
+                </div>
+            </div>
         </md-card-content>
     </md-card>
 </div>
