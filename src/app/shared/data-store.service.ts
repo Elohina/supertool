@@ -8,7 +8,7 @@ export class DataStore {
     constructor() {}
 
     public getCountriesHabitants(country: string, total?: number): any {
-        return this.data[country].slice(0, total ? total : this.data[country].length);
+        return this.data[country];
     }
 
     public get _cities() {
@@ -28,4 +28,3 @@ export class DataStore {
         );
     }
 }
-

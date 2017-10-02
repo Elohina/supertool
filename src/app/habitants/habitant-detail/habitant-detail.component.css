@@ -44,7 +44,7 @@
 }
 
 .mat-card-title {
-    font-size: 18px !important;    
+    font-size: 18px !important;
 }
 
 .weight-img {
@@ -84,4 +84,8 @@
 
 .chip-element {
     color: white;
+}
+
+.back-card.back-card::-webkit-scrollbar {
+display: none;
 }
