@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { DataStore } from '../shared/data-store.service';
-import {PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-habitants',

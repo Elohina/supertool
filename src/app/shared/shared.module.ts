@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService } from './data.service';
 import { DataStore } from './data-store.service';
-import { Http } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -10,6 +9,7 @@ import { Http } from '@angular/http';
   imports: [
     CommonModule
   ],
-  providers: [DataService, DataStore, Http],
+  exports: [],
+  providers: [DataService, DataStore],
 })
 export class SharedModule { }
