@@ -1,7 +1,8 @@
 <md-toolbar color="primary">
     The SuperTool
 </md-toolbar>
-<div class="filters">
+<div class="filters"
+     [ngClass]="{'slected-city': city, 'no-selected-city': !city}">
     <md-select [(ngModel)]="city"
             placeholder="Select city"
             name="city"
@@ -12,7 +13,7 @@
         </md-option>
     </md-select>
     <md-form-field class="search-container">
-        <input mdInput 
+        <input mdInput
                 class="seacrh-input"
                 placeholder="Search habitant"
                 [(ngModel)]="search_input"

@@ -15,8 +15,15 @@
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 1%;
     background-color: white;
+}
+
+.filters.no-selected-city {
+    padding-top: 15%;
+}
+
+.filters.selected-city {
+    padding-top: 1%;
 }
 
 .city-select {
