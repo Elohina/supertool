@@ -1,5 +1,4 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import {PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-habitants-list',
@@ -12,7 +11,6 @@ export class HabitantsListComponent implements OnChanges {
   public length = 0;
   public pageSize = 12;
   public city: string;
-  public pageEvent: PageEvent;
   public search_input: string;
   public index_page = 0;
 

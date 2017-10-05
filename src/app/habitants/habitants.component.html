@@ -20,5 +20,14 @@
                 name="search_input"
                 (keyup)="searchHabitant()">
     </md-form-field>
+    <md-select [(ngModel)]="selected_age"
+            placeholder="Select age"
+            name="age"
+            (change)="selectedAge()"
+            class="age-select">
+        <md-option *ngFor="let filter of ageFilters" [value]="filter">
+            {{filter.name}}
+        </md-option>
+    </md-select>
 </div>
 <app-habitants-list [list]="list"></app-habitants-list>

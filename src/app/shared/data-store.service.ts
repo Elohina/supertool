@@ -11,7 +11,7 @@ export class DataStore {
         return this.data[country];
     }
 
-    public get _cities() {
+    public get _cities(): any[] {
         return this.cities;
     }
 
@@ -26,5 +26,15 @@ export class DataStore {
                 return person.name.toLowerCase().match(text.toLowerCase());
             }
         );
+    }
+
+    public getHabitanstByAge(city: string, start: number, end: number): any[] {
+      if (start >= 0) {
+        return this.data[city].filter((element) => {
+          return element.age >= start && element.age < end;
+        });
+      } else {
+        return this.data[city];
+      }
     }
 }

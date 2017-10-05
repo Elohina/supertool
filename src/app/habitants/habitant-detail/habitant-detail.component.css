@@ -87,5 +87,14 @@
 }
 
 .back-card.back-card::-webkit-scrollbar {
-display: none;
+  display: none;
+}
+.weight {
+  top: 7px;
+  position: relative;
+}
+
+.height {
+  position: relative;
+  bottom: 3px;
 }
